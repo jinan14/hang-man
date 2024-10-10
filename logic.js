@@ -86,7 +86,7 @@ let levels = [
 
      // Add event listener to guess input field
      guessElement.addEventListener("input", (e) => {
-        guessLetter(e.target.value);
+        guessLetter(e.target.value.toLowerCase());
         e.target.value = "";
     });
 
