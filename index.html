@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Hangman Game</h1>
+        <p id="word"></p>
+        <p id="lives"></p>
+        <p id="score"></p>
+        <p id="clue"></p>
+        <input id="guess" type="text" placeholder="Guess a letter">
+        <p id="wrong-letters"></p>
+    </div>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url(./hangMan.jpg);
+            background-repeat: round;
+            background-size: cover;
+            color: white;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .container #word {
+            font-size: 30px;
+        }
+        #guess {
+            padding: 10px;
+            border-radius: 14px;
+            border: none;
+        }
+        #clue {
+            font-size: 20px;
+        }
+        #score {
+            font-size: 20px;
+        }
+        h1 {
+            font-size: 41px;
+            margin-bottom: 20px;
+        }
+        @media screen and (max-width: 960px){
+            .container {
+                margin-left: 50px;
+            }
+        }
+        @media screen and (max-width: 817px){
+            .container {
+                margin-left: 70px;
+            }
+        }
+        @media screen and (max-width: 740px){
+            .container {
+                margin-left: 90px;
+            }
+        }
+        @media screen and (max-width: 695px){
+            .container {
+                margin-left: 130px;
+            }
+        }
+        @media screen and (max-width: 565px){
+            .container {
+                margin-left: 150px;
+            }
+
+        }
+        @media screen and (max-width: 482px){
+            .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            font-size: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        }
+        @media screen and (max-width: 397px){
+            .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            font-size: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        #clue {
+            font-size: 16px;
+            text-align: center;
+        }
+        #guess {
+            padding: 10px;
+            border-radius: 14px;
+            border: none;
+            width: 130px;
+        }
+    }
+
+
+    </style>
+    <script src="logic.js"></script>
+</body>
+</html>
