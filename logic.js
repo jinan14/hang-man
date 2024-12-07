@@ -1,3 +1,4 @@
+
 let levels = [
     {
         word: "programming",
@@ -94,7 +95,20 @@ let levels = [
     function guessLetter(letter) {
         // Check if letter is already guessed
         if (guessedLetters.includes(letter)) {
-            alert("You already guessed this letter!");
+            Toastify({
+                text: "You already guessed this letter!",
+                duration: 3000,
+                destination: "https://github.com/apvarun/toastify-js",
+                newWindow: true,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "center", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                  background: "linear-gradient(to right, #FF0000, #ffc93d)",
+                },
+                onClick: function(){} // Callback after click
+              }).showToast();
             return;
         }
     
@@ -123,7 +137,21 @@ let levels = [
         // Check if user won or lost
         if (lives === 0) {
             setTimeout(() => { 
-            alert("Sorry, you ran out of lives. The word was: " + word);
+            Toastify({
+                text: "Sorry, you ran out of lives",
+                duration: 1400,
+                destination: "https://github.com/apvarun/toastify-js",
+                newWindow: true,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "center", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                  background: "linear-gradient(to right, #FF0000, #ffc93d)",
+                },
+                onClick: function(){} // Callback after click
+              }).showToast();
+            
             YouLost();
             }, 100);
         } 
@@ -138,9 +166,23 @@ let levels = [
         // Check if user won
         if (!wordElement.textContent.includes("_")) {
             setTimeout(() => {
-            alert("Congratulations, you won!");
+            
+            Toastify({
+                text: "Congratulations, you won!",
+                duration: 1400,
+                destination: "https://github.com/apvarun/toastify-js",
+                newWindow: true,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "center", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                  background: "linear-gradient(to right, #03d09b, #96d93d)",
+                },
+                onClick: function(){} // Callback after click
+              }).showToast();
             YouWon();
-            }, 100);
+            }, 150);
         }
     }
     // Function to display "You Won!" message
